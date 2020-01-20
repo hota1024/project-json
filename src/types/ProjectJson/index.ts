@@ -41,10 +41,10 @@ export type ProjectJson = {
           }
         | [number, string, string, number, number]
     }
-    monitors: {
-      id: string
-      mode: string
-      opcode: OPCode
-    }[]
+  }[]
+  monitors: {
+    id: string
+    mode: string
+    opcode: OPCode
   }[]
 }

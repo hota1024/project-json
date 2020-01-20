@@ -14,41 +14,37 @@ export type ProjectJson = {
       [id: string]: string
     }
     blocks: {
-      [id: string]: {
-        opcode: OPCode
-        next?: string
-        parent?: string
-        inputs: {
-          [name: string]: any[]
-        }
-        fields: {
-          [name: string]: any[]
-        }
-        shadow: boolean
-        topLevel: boolean
-        mutation?: {
-          tagName: string
-          children: []
-          proccode: string
-          argumentids: string
-          argumentnames: string
-          argumentdefaults: string
-          wrap: string
-        }
-        x?: number
-        y?: number
-      } | [
-        number,
-        string,
-        string,
-        number,
-        number
-      ]
+      [id: string]:
+        | {
+            opcode: OPCode
+            next?: string
+            parent?: string
+            inputs: {
+              [name: string]: any[]
+            }
+            fields: {
+              [name: string]: any[]
+            }
+            shadow: boolean
+            topLevel: boolean
+            mutation?: {
+              tagName: string
+              children: []
+              proccode: string
+              argumentids: string
+              argumentnames: string
+              argumentdefaults: string
+              wrap: string
+            }
+            x?: number
+            y?: number
+          }
+        | [number, string, string, number, number]
     }
     monitors: {
       id: string
       mode: string
-      opcode: 
+      opcode: OPCode
     }[]
   }[]
 }

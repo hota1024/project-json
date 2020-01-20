@@ -1,6 +1,7 @@
 import { OPCode } from '../OPCode'
 import { ExtensionCode } from '../ExtensionCode'
 import { MonitorMode } from '../MonitorMode'
+import { RotationStyle } from '../RotationStyle'
 
 export type ProjectJson = {
   targets: {
@@ -40,9 +41,40 @@ export type ProjectJson = {
             }
             x?: number
             y?: number
+            comment?: string
           }
         | [number, string, string, number, number]
     }
+    comments: {
+      [id: string]: {
+        blockId?: string
+        x: number
+        y: number
+        width: number
+        height: number
+        minimized: boolean
+        text: string
+      }
+    }
+    currentCostume: number
+    costumes: {
+      assetId: string
+      name: string
+      bitmapResolution: number
+      md5text: string
+      dataFormat: string
+      rotationCenterX: number
+      rotationCenterY: number
+    }[]
+    volume: number
+    layerOrder: number
+    visible: boolean
+    x: number
+    y: number
+    size: number
+    direction: number
+    draggable: boolean
+    rotationStyle: RotationStyle
   }[]
   monitors: {
     id: string

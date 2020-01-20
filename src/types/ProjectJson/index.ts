@@ -1,5 +1,6 @@
 import { OPCode } from '../OPCode'
 import { ExtensionCode } from '../ExtensionCode'
+import { MonitorMode } from '../MonitorMode'
 
 export type ProjectJson = {
   targets: {
@@ -45,8 +46,26 @@ export type ProjectJson = {
   }[]
   monitors: {
     id: string
-    mode: string
+    mode: MonitorMode
     opcode: OPCode
+    params: {
+      [name: string]: any
+    }
+    spriteName?: string
+    value: any
+    width: number
+    height: number
+    x: number
+    y: number
+    visible: boolean
+    sliderMin: number
+    sliderMax: number
+    isDiscrete: boolean
   }[]
   extensions: ExtensionCode[]
+  meta: {
+    semver: string
+    vm: string
+    agent: string
+  }
 }

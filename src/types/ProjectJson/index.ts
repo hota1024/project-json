@@ -1,4 +1,5 @@
 import { OPCode } from '../OPCode'
+import { ExtensionCode } from '../ExtensionCode'
 
 export type ProjectJson = {
   targets: {
@@ -47,4 +48,5 @@ export type ProjectJson = {
     mode: string
     opcode: OPCode
   }[]
+  extensions: ExtensionCode[]
 }

@@ -13,7 +13,9 @@
     "codecov": "npm run jest && codecov",
     "lint": "eslint ./**/*.ts"
   },
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.19.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",

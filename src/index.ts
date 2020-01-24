@@ -1,15 +1,9 @@
-import axios from 'axios'
-import { ProjectJson } from './types/ProjectJson'
-;(async () => {
-  const response = await axios.get<ProjectJson>(
-    'https://projects.scratch.mit.edu/360757304'
-  )
-  const project = response.data
+import { ProjectJsonParser } from './impls/ProjectJsonParser'
 
-  const sprite = project.targets[1]
-  const blocks = sprite.blocks
+export * from './abstracts'
+export * from './classes'
+export * from './impls'
+export * from './interfaces'
+export * from './types'
 
-  if (Array.isArray(blocks[0])) {
-    blocks
-  }
-})()
+export default ProjectJsonParser

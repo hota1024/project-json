@@ -9,7 +9,7 @@ import { BroadcastInterface } from '../../../interfaces/Broadcast'
 import { CommentInterface } from '../../../interfaces/Comment'
 import { CostumeInterface } from '../../../interfaces/Costume'
 import { SoundInterface } from '../../../interfaces/Sound'
-import { VideoState } from '../../../types/VIdeoState'
+import { VideoState } from '../../../types/VideoState'
 
 /*
  * Stage class.

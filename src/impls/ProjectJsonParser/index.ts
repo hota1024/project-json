@@ -16,7 +16,6 @@ import { Costume } from '../assets/Costume'
 import { Sound } from '../assets/Sound'
 import { Sprite } from '../targets/Sprite'
 import { BroadcastInterface } from '../../interfaces/Broadcast'
-import Axios from 'axios'
 
 /*
  * ProjectJsonParser class.

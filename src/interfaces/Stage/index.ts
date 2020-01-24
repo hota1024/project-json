@@ -1,5 +1,5 @@
 import { TargetInterface } from '../Target'
-import { VideoState } from '../../types/VIdeoState'
+import { VideoState } from '../../types/VideoState'
 
 /*
  * Stage interface.

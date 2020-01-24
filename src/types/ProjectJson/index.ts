@@ -2,6 +2,7 @@ import { OPCode } from '../OPCode'
 import { ExtensionCode } from '../ExtensionCode'
 import { MonitorMode } from '../MonitorMode'
 import { RotationStyle } from '../RotationStyle'
+import { VideoState } from '../VIdeoState'
 
 export type ProjectJson = {
   targets: {
@@ -10,7 +11,7 @@ export type ProjectJson = {
     variables: {
       [id: string]: [string, any]
     }
-    list: {
+    lists: {
       [id: string]: [string, any[]]
     }
     broadcasts: {
@@ -39,8 +40,8 @@ export type ProjectJson = {
               argumentdefaults: string
               wrap: string
             }
-            x?: number
-            y?: number
+            x: number
+            y: number
             comment?: string
           }
         | [number, string, string, number, number]
@@ -66,8 +67,21 @@ export type ProjectJson = {
       rotationCenterX: number
       rotationCenterY: number
     }[]
+    sounds: {
+      assetId: string
+      name: string
+      dataFormat: string
+      format: string
+      rate: number
+      sampleCount: number
+      md5text: string
+    }[]
     volume: number
     layerOrder: number
+    tempo: number
+    videoTransparency: number
+    videoState: VideoState
+    textToSpeechLanguage: string
     visible: boolean
     x: number
     y: number

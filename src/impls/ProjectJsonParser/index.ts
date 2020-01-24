@@ -158,7 +158,7 @@ export class ProjectJsonParser implements ProjectJsonParserInterface {
     return project
   }
 
-  parseVariable([id, data]: [string, [string, any]]) {
+  private parseVariable([id, data]: [string, [string, any]]) {
     return new Variable({
       id,
       name: data[0],
@@ -166,7 +166,7 @@ export class ProjectJsonParser implements ProjectJsonParserInterface {
     })
   }
 
-  parseList([id, data]: [string, [string, any[]]]) {
+  private parseList([id, data]: [string, [string, any[]]]) {
     return new List({
       id,
       name: data[0],
@@ -174,7 +174,7 @@ export class ProjectJsonParser implements ProjectJsonParserInterface {
     })
   }
 
-  parseBroadcast([id, name]: [string, string]) {
+  private parseBroadcast([id, name]: [string, string]) {
     const broadcast: BroadcastInterface = {
       id,
       name

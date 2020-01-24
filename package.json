@@ -1,6 +1,6 @@
 {
   "name": "project-json",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "hota1024",
   "main": "lib/index.js",
   "types": "lib/src",

@@ -2,7 +2,6 @@ import { AssetInterface } from '../../interfaces/Asset'
 import { CostumeInterface } from '../../interfaces/Costume'
 import { SoundInterface } from '../../interfaces/Sound'
 import { UseTarget } from '../../classes/UseTarget'
-import { SpriteInterface } from '../../interfaces/Sprite'
 
 /*
  * Asset class.

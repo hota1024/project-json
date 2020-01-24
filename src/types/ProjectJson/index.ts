@@ -2,7 +2,7 @@ import { OPCode } from '../OPCode'
 import { ExtensionCode } from '../ExtensionCode'
 import { MonitorMode } from '../MonitorMode'
 import { RotationStyle } from '../RotationStyle'
-import { VideoState } from '../VIdeoState'
+import { VideoState } from '../VideoState'
 
 export type ProjectJson = {
   targets: {

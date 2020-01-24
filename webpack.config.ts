@@ -4,7 +4,7 @@ const pkg = require('./package.json')
 
 const config: Configuration = {
   mode: 'development',
-  entry: path.resolve(__dirname, './src/index.ts'),
+  entry: ['babel-polyfill', path.resolve(__dirname, './src/index.ts')],
   output: {
     path: path.resolve(__dirname, './lib'),
     filename: 'index.js',
@@ -35,6 +35,9 @@ const config: Configuration = {
         exclude: /(node_modules|lib)/
       }
     ]
+  },
+  externals: {
+    'babel-polyfill': 'babel-polyfill'
   }
 }
 

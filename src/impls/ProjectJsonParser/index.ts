@@ -16,6 +16,7 @@ import { Costume } from '../assets/Costume'
 import { Sound } from '../assets/Sound'
 import { Sprite } from '../targets/Sprite'
 import { BroadcastInterface } from '../../interfaces/Broadcast'
+import axios, { AxiosRequestConfig } from 'axios'
 
 /*
  * ProjectJsonParser class.
@@ -156,6 +157,20 @@ export class ProjectJsonParser implements ProjectJsonParserInterface {
     }
 
     return project
+  }
+
+  /**
+   * Download.
+   *
+   * @param id
+   */
+  async download(id: number | string, config?: AxiosRequestConfig) {
+    const response = await axios.get<ProjectJson>(
+      `https://projects.scratch.mit.edu/${id}`,
+      config
+    )
+    const json = response.data
+    return this.parse(json)
   }
 
   private parseVariable([id, data]: [string, [string, any]]) {

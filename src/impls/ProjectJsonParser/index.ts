@@ -30,7 +30,7 @@ export class ProjectJsonParser implements ProjectJsonParserInterface {
   parse(json: ProjectJson) {
     const targets: Target[] = []
     const monitors: MonitorInterface[] = []
-    const extensions: ExtensionCode[] = []
+    const extensions: ExtensionCode[] = json.extensions
     const meta: MetaDataInterface = json.meta
 
     const project = new Project({

@@ -197,15 +197,3 @@ export class ProjectJsonParser implements ProjectJsonParserInterface {
     return broadcast
   }
 }
-
-console.log('OK')
-;(async () => {
-  console.log('OK async')
-  let res = await axios.get('https://projects.scratch.mit.edu/357137675')
-  let data = res.data
-
-  const parser = new ProjectJsonParser()
-  const project = parser.parse(data)
-
-  console.log(project.sprites()[0].costumes())
-})()

@@ -62,7 +62,7 @@ export type ProjectJson = {
       assetId: string
       name: string
       bitmapResolution: number
-      md5text: string
+      md5ext: string
       dataFormat: string
       rotationCenterX: number
       rotationCenterY: number
@@ -74,7 +74,7 @@ export type ProjectJson = {
       format: string
       rate: number
       sampleCount: number
-      md5text: string
+      md5ext: string
     }[]
     volume: number
     layerOrder: number

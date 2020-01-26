@@ -98,7 +98,7 @@ export class ProjectJsonParser implements ProjectJsonParserInterface {
         return new Costume({
           id: costume.assetId,
           name: costume.name,
-          md5: costume.md5text,
+          md5: costume.md5ext,
           dataFormat: costume.dataFormat,
           rotationCenterX: costume.rotationCenterX,
           rotationCenterY: costume.rotationCenterY
@@ -108,7 +108,7 @@ export class ProjectJsonParser implements ProjectJsonParserInterface {
         return new Sound({
           id: sound.assetId,
           name: sound.name,
-          md5: sound.md5text,
+          md5: sound.md5ext,
           dataFormat: sound.dataFormat,
           format: sound.format,
           rate: sound.rate,
@@ -197,3 +197,15 @@ export class ProjectJsonParser implements ProjectJsonParserInterface {
     return broadcast
   }
 }
+
+console.log('OK')
+;(async () => {
+  console.log('OK async')
+  let res = await axios.get('https://projects.scratch.mit.edu/357137675')
+  let data = res.data
+
+  const parser = new ProjectJsonParser()
+  const project = parser.parse(data)
+
+  console.log(project.sprites()[0].costumes())
+})()

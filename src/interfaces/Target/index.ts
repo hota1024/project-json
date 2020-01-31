@@ -9,6 +9,7 @@ import { SoundInterface } from '../Sound'
 import { UseProjectInterface } from '../UseProject'
 import { StageInterface } from '../Stage'
 import { SpriteInterface } from '../Sprite'
+import { BlockCategory } from '../../types'
 
 /*
  * Target interface.
@@ -80,4 +81,11 @@ export interface TargetInterface extends UseProjectInterface {
    * Sounds.
    */
   sounds(): SoundInterface[]
+
+  /**
+   * Get category blocks.
+   *
+   * @param category
+   */
+  getCategoryBlocks(category: BlockCategory): BlockInterface[]
 }

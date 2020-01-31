@@ -12,6 +12,7 @@ import { ProjectInterface } from '../../interfaces/Project'
 import { StageInterface } from '../../interfaces/Stage'
 import { SpriteInterface } from '../../interfaces/Sprite'
 import { UseTargetInterface } from '../../interfaces/UseTarget'
+import { BlockCategory } from '../../types'
 
 /*
  * Target class.
@@ -158,5 +159,9 @@ export abstract class Target extends UseProject implements TargetInterface {
 
   sounds() {
     return this.mSounds
+  }
+
+  getCategoryBlocks(category: BlockCategory) {
+    return this.mBlocks.filter(block => block.isCategoryBlock(category))
   }
 }
